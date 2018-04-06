@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Rc-d0-t0B">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Curogram-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Curogram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qrb-km-ae0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="2"/>
+                                <color key="progressTintColor" red="0.93333333330000001" green="0.35294117650000001" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sDg-ul-YDX">
+                                <rect key="frame" x="0.0" y="66" width="375" height="601"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="tvP-Wo-iK7">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tvP-Wo-iK7" id="mI2-1J-gbQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Qrb-km-ae0" secondAttribute="trailing" id="0Bj-EO-RWf"/>
+                            <constraint firstItem="Qrb-km-ae0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6Xd-EC-XSB"/>
+                            <constraint firstItem="sDg-ul-YDX" firstAttribute="top" secondItem="Qrb-km-ae0" secondAttribute="bottom" id="cV4-Vu-Gm3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sDg-ul-YDX" secondAttribute="trailing" id="det-uu-lgc"/>
+                            <constraint firstItem="Qrb-km-ae0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gj2-vM-w6s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sDg-ul-YDX" secondAttribute="bottom" id="jPJ-2M-fyw"/>
+                            <constraint firstItem="sDg-ul-YDX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tG4-0c-z5i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Curogram" id="jdn-lK-SUS">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="undo" id="nsq-o7-5Jj">
+                                <connections>
+                                    <action selector="undoAction:" destination="BYZ-38-t0r" id="uTg-ic-RUg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="sal-qC-7OP">
+                                <connections>
+                                    <action selector="addAction:" destination="BYZ-38-t0r" id="Cm1-qJ-JAJ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressUI" destination="Qrb-km-ae0" id="smb-Ec-2Vp"/>
+                        <outlet property="tableView" destination="sDg-ul-YDX" id="qUn-8f-eoB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="-566"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c4C-lN-8OH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Rc-d0-t0B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZEg-Ho-UhU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oSa-yw-LaD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gny-Zz-j95" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="-579.76011994002999"/>
+        </scene>
+    </scenes>
+</document>

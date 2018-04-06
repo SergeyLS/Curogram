@@ -12,6 +12,11 @@
 		F74CD31520779A1000589BBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74CD31320779A1000589BBD /* Main.storyboard */; };
 		F74CD31720779A1100589BBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F74CD31620779A1100589BBD /* Assets.xcassets */; };
 		F74CD31A20779A1100589BBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74CD31820779A1100589BBD /* LaunchScreen.storyboard */; };
+		F74CD32520779D9D00589BBD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F74CD32320779D9D00589BBD /* Model.xcdatamodeld */; };
+		F74CD32D20779FB500589BBD /* Number+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74CD32B20779FB500589BBD /* Number+CoreDataClass.swift */; };
+		F74CD32E20779FB500589BBD /* Number+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74CD32C20779FB500589BBD /* Number+CoreDataProperties.swift */; };
+		F74CD3312077A32200589BBD /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74CD3302077A0A600589BBD /* CoreDataManager.swift */; };
+		F74CD3372077BD0C00589BBD /* NumberManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74CD3362077BD0C00589BBD /* NumberManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		F74CD31620779A1100589BBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F74CD31920779A1100589BBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F74CD31B20779A1100589BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F74CD32420779D9D00589BBD /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		F74CD32B20779FB500589BBD /* Number+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F74CD32C20779FB500589BBD /* Number+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F74CD3302077A0A600589BBD /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F74CD3362077BD0C00589BBD /* NumberManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,51 @@
 		F74CD30E20779A1000589BBD /* Curogram */ = {
 			isa = PBXGroup;
 			children = (
+				F74CD32F2077A09900589BBD /* Managers */,
+				F74CD32620779F6B00589BBD /* Model */,
+				F74CD32220779A8C00589BBD /* ViewControllers */,
+				F74CD32120779A7200589BBD /* Storyboard */,
 				F74CD30F20779A1000589BBD /* AppDelegate.swift */,
-				F74CD31120779A1000589BBD /* ViewController.swift */,
-				F74CD31320779A1000589BBD /* Main.storyboard */,
+				F74CD32320779D9D00589BBD /* Model.xcdatamodeld */,
 				F74CD31620779A1100589BBD /* Assets.xcassets */,
-				F74CD31820779A1100589BBD /* LaunchScreen.storyboard */,
 				F74CD31B20779A1100589BBD /* Info.plist */,
 			);
 			path = Curogram;
+			sourceTree = "<group>";
+		};
+		F74CD32120779A7200589BBD /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F74CD31320779A1000589BBD /* Main.storyboard */,
+				F74CD31820779A1100589BBD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F74CD32220779A8C00589BBD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F74CD31120779A1000589BBD /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F74CD32620779F6B00589BBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F74CD32B20779FB500589BBD /* Number+CoreDataClass.swift */,
+				F74CD32C20779FB500589BBD /* Number+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F74CD32F2077A09900589BBD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F74CD3302077A0A600589BBD /* CoreDataManager.swift */,
+				F74CD3362077BD0C00589BBD /* NumberManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F74CD3312077A32200589BBD /* CoreDataManager.swift in Sources */,
+				F74CD32E20779FB500589BBD /* Number+CoreDataProperties.swift in Sources */,
+				F74CD3372077BD0C00589BBD /* NumberManager.swift in Sources */,
 				F74CD31220779A1000589BBD /* ViewController.swift in Sources */,
 				F74CD31020779A1000589BBD /* AppDelegate.swift in Sources */,
+				F74CD32D20779FB500589BBD /* Number+CoreDataClass.swift in Sources */,
+				F74CD32520779D9D00589BBD /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +335,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR2UCZHHPB;
 				INFOPLIST_FILE = Curogram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +354,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR2UCZHHPB;
 				INFOPLIST_FILE = Curogram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,6 +388,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F74CD32320779D9D00589BBD /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F74CD32420779D9D00589BBD /* Model.xcdatamodel */,
+			);
+			currentVersion = F74CD32420779D9D00589BBD /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F74CD30420779A1000589BBD /* Project object */;
 }
